@@ -65,17 +65,44 @@
                                 <div class="text-gray-400 pl-3">6 days ago</div>
                             </div>
                             <div class="text-gray-200 text-sm font-semibold">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem provident, quod eum harum natus nisi libero, consectetur officia, ratione delectus odit. Suscipit placeat ut maiores ipsam deserunt commodi necessitatibus temporibus!
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Voluptatem provident, quod eum
+                                harum natus nisi libero, consectetur officia,
+                                ratione delectus odit. Suscipit placeat ut
+                                maiores ipsam deserunt commodi necessitatibus
+                                temporibus!
                             </div>
                             <div class="mt-3 flex items-center">
-                                <ThumbUpOutline fillColor="#ffffff" :size="18" class="pr-2" />
-                                <div class="text-gray-400 text-sm font-extrabold pr-5">
+                                <ThumbUpOutline
+                                    fillColor="#ffffff"
+                                    :size="18"
+                                    class="pr-2"
+                                />
+                                <div
+                                    class="text-gray-400 text-sm font-extrabold pr-5"
+                                >
                                     {{ (Math.random() * 100).toFixed(0) }}
                                 </div>
-                                <ThumbDownOutline fillColor="#ffffff" :size="18" />
+                                <ThumbDownOutline
+                                    fillColor="#ffffff"
+                                    :size="18"
+                                />
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="w-[500px] p-3 sm:block hidden">
+                <div class="flex mb-3 items-start">
+                    <RecommendedVideos
+                        :vid="{
+                            title: 'How to make the best chicken wings',
+                            video: '/videos/test.mp4',
+                            thumbnail: '/videos/test.png',
+                            user: 'Fullstack Developer',
+                            views: '1M views - 10 days ago',
+                        }"
+                    />
                 </div>
             </div>
         </div>
@@ -87,4 +114,5 @@ import NavLayout from "@/Layouts/NavLayout.vue";
 import CheckCircle from "vue-material-design-icons/CheckCircle.vue";
 import ThumbUpOutline from "vue-material-design-icons/ThumbUpOutline.vue";
 import ThumbDownOutline from "vue-material-design-icons/ThumbDownOutline.vue";
+import RecommendedVideos from "@/Components/RecommendedVideos.vue";
 </script>

@@ -19,7 +19,14 @@ use Inertia\Inertia;
 
 Route::get('/', function () {
     return Inertia::render('Welcome');
-});
+})->name('home');
+
+Route::get('/add-video', function () {
+    return Inertia::render('AddVideo');
+})->name('addVideo');
+Route::get('/delete-video', function () {
+    return Inertia::render('DeleteVideo');
+})->name('deleteVideo');
 
 Route::controller(VideoController::class)->group(function () {
     Route::get('/videos/{video}', 'show')->name('videos.show');
